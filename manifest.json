@@ -1,9 +1,9 @@
 {
-  "name": "Stripe for Gmail",
-  "description": "Show Stripe customer information in Gmail",
-  "version": "0.5",
+  "name": "Attachd",
+  "description": "Compose emails from attachments.",
+  "version": "1.0",
   "icons": {
-    "128": "images/stripe.png"
+    "64": "paper-plane.png"
   },
   "content_scripts": [
     {
@@ -11,22 +11,16 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["js/jquery.js", "js/underscore.js", "js/inboxsdk.js","js/app.js"],
+      "js": ["jquery.js","inboxsdk.js","app.js", "platform-implementation.js"],
       "css": ["styles.css"],
       "run_at": "document_end"
     }
   ],
   "permissions": [
     "https://mail.google.com/",
-    "https://inbox.google.com/",
-    "https://*.stripe.com/"
+    "https://inbox.google.com/"
   ],
   "web_accessible_resources": [
-    "images/stripe.png",
-    "images/paid.png",
-    "images/unpaid.png",
-    "images/cards/*",
-    "sidebarTemplate.html"
-  ],
+    "paper-plane.png"],
   "manifest_version": 2
 }
